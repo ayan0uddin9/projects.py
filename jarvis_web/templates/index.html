@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Jarvis (Offline)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/static/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <h1>Jarvis (Offline)</h1>
+
+    <div class="controls">
+      <input id="commandInput" type="text" placeholder="Type a command (e.g., play music, open notepad, calculate 12/3, remember name is Ayan)" />
+      <button id="sendBtn">Send</button>
+      <button id="voiceBtn" data-enabled="{{ '1' if voice_ready else '0' }}">Listen</button>
+    </div>
+
+    <div class="log" id="log"></div>
+
+    <div class="player">
+      <audio id="audio" controls preload="none"></audio>
+      <div id="nowPlaying"></div>
+      <button id="nextSongBtn">Play random song</button>
+    </div>
+
+    <div class="help">
+      <h2>Examples</h2>
+      <ul>
+        <li><b>Time:</b> "what's the time" or "date"</li>
+        <li><b>Apps:</b> "open chrome" | "open notepad" | "open calc"</li>
+        <li><b>Music:</b> "play music" or click <i>Play random song</i></li>
+        <li><b>Math:</b> "calculate 12/3" or "calc 2**8"</li>
+        <li><b>Memory:</b> "remember name is Ayan", "recall name", "what is name"</li>
+        <li><b>Jokes:</b> "tell me a joke"</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+# jarvis_web
